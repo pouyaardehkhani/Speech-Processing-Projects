@@ -6,14 +6,14 @@ A collection of speech and audio processing projects spanning **classical DSP**,
 
 | Project | Area | Approach |
 |---------|------|----------|
-| [TD-PSOLA](./TD-PSOLA) | Speech manipulation | From-scratch pitch & duration modification via pitch-synchronous overlap-add |
-| [Spectral Subtraction](./Spectral-Subtraction) | Speech enhancement | Classic noise-spectrum subtraction (LibriSpeech + NOISEX-92) |
-| [Speech Enhancement: DSP vs Deep Learning](./Speech-Enhancement) | Speech enhancement | Spectral subtraction & Wiener filtering vs. a Conformer U-Net mask estimator |
-| [Channel Noise in Representation Space](./Channel-Noise) | Robustness analysis | Gaussian noise injected into mel / STFT / MFCC representations and reconstructed |
-| [MFCC vs PLP](./MFCC-vs-PLP) | Acoustic features | Feature comparison for spoken-digit recognition under clean and noisy conditions |
-| [Speech Emotion Recognition](./Speech-Emotion-Recognition) | Sound classification | LSTM over MFCC features across seven emotions |
-| [SpeechT5 Persian TTS](./SpeechT5-Persian-TTS) | Text-to-speech | Fine-tuning Microsoft SpeechT5 + HiFi-GAN for Persian, with x-vector speaker conditioning |
-| [AudioLLM (Toy ASR)](./AudioLLM) | Speech recognition | Bridging frozen EnCodec tokens to a frozen LLM via a trainable mapper |
+| [TD-PSOLA](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/TD-PSOLA) | Speech manipulation | From-scratch pitch & duration modification via pitch-synchronous overlap-add |
+| [Spectral Subtraction](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Spectral%20Subtraction) | Speech enhancement | Classic noise-spectrum subtraction (LibriSpeech + NOISEX-92) |
+| [Speech Enhancement: DSP vs Deep Learning](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Speech%20Enhancement) | Speech enhancement | Spectral subtraction & Wiener filtering vs. a Conformer U-Net mask estimator |
+| [Channel Noise in Representation Space](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Channel%20Noise%20Effect) | Robustness analysis | Gaussian noise injected into mel / STFT / MFCC representations and reconstructed |
+| [MFCC vs PLP](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Compare%20MFCC%20and%20PLP) | Acoustic features | Feature comparison for spoken-digit recognition under clean and noisy conditions |
+| [Speech Emotion Recognition](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Speech%20Emotion%20Recognition) | Sound classification | LSTM over MFCC features across seven emotions |
+| [SpeechT5 Persian TTS](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/Fine-tune%20SpeechT5) | Text-to-speech | Fine-tuning Microsoft SpeechT5 + HiFi-GAN for Persian, with x-vector speaker conditioning |
+| [AudioLLM (Toy ASR)](https://github.com/pouyaardehkhani/Speech-Processing-Projects/tree/master/AudioLLM) | Speech recognition | Bridging frozen EnCodec tokens to a frozen LLM via a trainable mapper |
 
 > Folder names above are placeholders — rename the links to match your actual directory names.
 
