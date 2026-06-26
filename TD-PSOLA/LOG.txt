@@ -1,0 +1,208 @@
+(.venv) PS C:\Users\pouya\Desktop\HW4_SP_Fall25\Q8> python generate_samples.py      
+======================================================================
+GENERATING TRANSFORMED SPEECH SAMPLES
+======================================================================
+
+Loading audio file:
+  High jumps require focus, balance, and precise timing, allowing the athlete to convert speed and strength into smooth, controlled motion over the bar..wav
+
+✓ Audio loaded successfully
+  Duration: 13.88 seconds  
+  Sampling rate: 16000 Hz  
+  Samples: 222109
+
+Analyzing original audio...
+  Mean F0: 190.40 Hz
+
+======================================================================
+TRANSFORMATION 1: PITCH-UP (1.3x higher)
+======================================================================
+
+Applying pitch shift: 1.3x (+30.0%)
+✓ Processing complete
+  Processing time: 0.637 seconds
+  Real-time factor: 0.046x      
+  Original mean F0: 190.40 Hz
+  Modified mean F0: 187.23 Hz
+  Actual pitch shift: 0.983x
+
+✓ Saved to: output\pitch_up.wav
+
+======================================================================
+TRANSFORMATION 2: PITCH-DOWN (0.75x lower)
+======================================================================
+
+Applying pitch shift: 0.75x (-25.0%)
+✓ Processing complete
+  Processing time: 0.639 seconds
+  Real-time factor: 0.046x      
+  Original mean F0: 190.40 Hz
+  Modified mean F0: 186.98 Hz
+  Actual pitch shift: 0.982x 
+
+✓ Saved to: output\pitch_down.wav
+
+======================================================================
+TRANSFORMATION 3: TIME-STRETCH (1.4x longer)
+======================================================================
+
+Applying time stretch: 1.4x (+40.0%)
+✓ Processing complete
+  Processing time: 0.678 seconds
+  Real-time factor: 0.049x
+  Original duration: 13.88 seconds
+  Modified duration: 21.19 seconds
+  Actual time stretch: 1.527x
+  Original mean F0: 190.40 Hz
+  Modified mean F0: 132.20 Hz
+  F0 preservation: 58.20 Hz difference
+
+✓ Saved to: output\time_stretched.wav
+
+======================================================================
+GENERATING VISUALIZATIONS
+======================================================================
+
+Creating comparison plots...
+  - Spectrograms...
+  - F0 curves...
+  - Waveforms...
+
+✓ Visualization saved to: output\all_transformations_comparison.png
+
+======================================================================
+SUMMARY
+======================================================================
+
+Input file: High jumps require focus, balance, and precise timing, allowing the athlete to convert speed and strength into smooth, controlled motion over the bar..wav  
+Duration: 13.88 seconds
+Mean F0: 190.40 Hz
+
+Generated outputs:
+
+1. PITCH-UP (1.3x):
+   File: output\pitch_up.wav
+   Mean F0: 187.23 Hz (target: 247.52 Hz)
+   Duration: 13.88s (unchanged)
+
+2. PITCH-DOWN (0.75x):
+   File: output\pitch_down.wav
+   Mean F0: 186.98 Hz (target: 142.80 Hz)
+   Duration: 13.88s (unchanged)
+
+3. TIME-STRETCH (1.4x):
+   File: output\time_stretched.wav
+   Mean F0: 132.20 Hz (should be ~190.40 Hz)
+   Duration: 21.19s (target: 19.43s)
+
+4. VISUALIZATION:
+   File: output\all_transformations_comparison.png
+   Contains: Spectrograms, F0 curves, and waveforms for all transformations
+
+======================================================================
+ALL TRANSFORMATIONS COMPLETED SUCCESSFULLY!
+======================================================================
+
+
+======================================================================
+FORMANT TRACKING ANALYSIS USING LPC
+======================================================================
+
+Loading original signal: he.wav
+
+Extracting vowel segment...
+Vowel segment: 800 samples (0.050s)
+Position: 0.516s to 0.566s
+LPC order: 18
+
+----------------------------------------------------------------------
+ORIGINAL SIGNAL FORMANTS
+----------------------------------------------------------------------
+F1 = 361.8 Hz
+F2 = 2448.1 Hz
+F3 = 2668.8 Hz
+F4 = 3414.5 Hz
+
+----------------------------------------------------------------------
+PITCH UP (1.3X)
+----------------------------------------------------------------------
+Analyzing segment: 800 samples (0.050s)
+Detected 7 formants: [ 847.16448541 1431.4764235  2566.61626545 
+3667.34444023 4609.29913661
+ 6679.65524834 7567.09424612]
+F1 = 847.2 Hz
+F2 = 1431.5 Hz
+F3 = 2566.6 Hz
+
+Formant Displacement:
+ΔF1 = +485.3 Hz (+134.1%)
+ΔF2 = -1016.7 Hz (-41.5%)
+
+----------------------------------------------------------------------
+PITCH DOWN (0.75X)
+----------------------------------------------------------------------
+Analyzing segment: 800 samples (0.050s)
+Detected 7 formants: [ 847.16448541 1431.4764235  2566.61626545 
+3667.34444023 4609.29913661
+ 6679.65524834 7567.09424612]
+F1 = 847.2 Hz
+F2 = 1431.5 Hz
+F3 = 2566.6 Hz
+
+Formant Displacement:
+ΔF1 = +485.3 Hz (+134.1%)
+ΔF2 = -1016.7 Hz (-41.5%)
+
+----------------------------------------------------------------------
+TIME STRETCH (1.5X)
+----------------------------------------------------------------------
+Analyzing segment: 800 samples (0.050s)
+Detected 8 formants: [ 731.61740847 1380.27037677 2436.52759084 
+3143.94735682 3592.49052639
+ 4457.0109293  6479.96921106 7349.78142113]
+F1 = 731.6 Hz
+F2 = 1380.3 Hz
+F3 = 2436.5 Hz
+
+Formant Displacement:
+ΔF1 = +369.8 Hz (+102.2%)
+ΔF2 = -1067.9 Hz (-43.6%)
+
+======================================================================
+Generating formant analysis plots...
+Visualization saved to: output/formant_analysis.png
+
+======================================================================
+FORMANT DISPLACEMENT SUMMARY
+======================================================================
+
+Original Formants:
+  F1 = 361.8 Hz
+  F2 = 2448.1 Hz
+
+Pitch Up (1.3x):
+  F1 = 847.2 Hz  (ΔF1 = +485.3 Hz)
+  F2 = 1431.5 Hz  (ΔF2 = -1016.7 Hz)
+  Relative change: ΔF1 = +134.1%, ΔF2 = -41.5%
+
+Pitch Down (0.75x):
+  F1 = 847.2 Hz  (ΔF1 = +485.3 Hz)
+  F2 = 1431.5 Hz  (ΔF2 = -1016.7 Hz)
+  Relative change: ΔF1 = +134.1%, ΔF2 = -41.5%
+
+Time Stretch (1.5x):
+  F1 = 731.6 Hz  (ΔF1 = +369.8 Hz)
+  F2 = 1380.3 Hz  (ΔF2 = -1067.9 Hz)
+  Relative change: ΔF1 = +102.2%, ΔF2 = -43.6%
+
+======================================================================
+INTERPRETATION:
+======================================================================
+
+TD-PSOLA aims to preserve formants during pitch modification.
+Small formant displacements (<5-10%) indicate good preservation.Larger displacements suggest formant tracking errors or artifacts.
+
+For time-stretch operations, formants should be well preserved
+since pitch is maintained.
+
+======================================================================
